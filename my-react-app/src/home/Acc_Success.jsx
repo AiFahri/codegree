@@ -14,7 +14,6 @@ const Acc_Success = () => {
           Sekarang, jawab beberapa pertanyaan agar kami dapat menyesuaikan
           pembelajaran untukmu.
         </h3>
-        <br></br>
         <Button
           type={"button"}
           className="mt-6"

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Input from "../ui/Input";
 import Button from "../ui/Button";
 import Acc_Success from "../../home/Acc_Success";
-// import { handleLogin } from "../../api/services/auth";
+import { handleLogin } from "../../api/services/auth";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -17,16 +17,15 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(form);
 
     try {
-      // const response = await handleLogin(form);
-      // window.localStorage.setItem("token", response.data.token);
+      const response = await handleLogin(form);
+      window.localStorage.setItem("token", response.data.token);
       setTimeout(() => {
         navigate("/question");
       }, 1000);
     } catch (error) {
-      console.log(error);
+      alert("Email atau Password Anda Salah!");
     }
   };
 
@@ -54,7 +53,7 @@ const LoginForm = () => {
               required={true}
             />
           </div>
-          //password
+
           <div>
             <div className="mt-2"></div>
 
@@ -78,7 +77,7 @@ const LoginForm = () => {
           <p className="mt-10 text-center text-sm text-gray-500">
             Belum punya akun?
             <a
-              href="./RegisterPage"
+              href="./signup"
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
               {" "}

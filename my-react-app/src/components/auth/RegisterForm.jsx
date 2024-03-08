@@ -63,7 +63,7 @@ const RegisterForm = () => {
               required={true}
             />
           </div>
-          //password
+
           <div>
             <Input
               type="password"

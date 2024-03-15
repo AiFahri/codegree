@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../layout/Header";
 
+import Navbar from "../shared/Navbar";
 const MainLayout = ({ children }) => {
   return (
     <div>
-      <Header />
+      <Navbar />
       {children}
     </div>
   );

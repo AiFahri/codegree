@@ -7,13 +7,26 @@ import AuthRoute from "../components/routes/AuthRoute";
 // Pages
 import LoginPage from "../components/pages/LoginPage";
 import RegisterPage from "../components/pages/RegisterPage";
-import Question from "../home/Question";
-import Acc_Success from "../home/Acc_Success";
+import Question from "../components/home/Question";
+import Question2 from "../components/home/Question2";
+import Acc_Success from "../components/home/Acc_Success";
+import Landing_Page from "../components/pages/Landing_Page";
+import Subscribtion from "../components/pages/Subscription";
+import Payment from "../components/ui/Payment";
+import Dashboard from "../components/pages/Dashboard";
 
 const router = createBrowserRouter([
   {
     element: <AuthRoute />,
     children: [
+      {
+        path: "/landingpage",
+        element: <Landing_Page />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
       {
         path: "/login",
         element: <LoginPage />,
@@ -30,6 +43,18 @@ const router = createBrowserRouter([
         path: "/question",
         element: <Question />,
       },
+      {
+        path: "/question2",
+        element: <Question2 />,
+      },
+      {
+        path: "/subscription",
+        element: <Subscribtion />,
+      },
+      {
+        path: "/payment",
+        element: <Payment />,
+      },
     ],
   },
   {
@@ -37,7 +62,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Acc_Success />,
+        element: <Dashboard />,
       },
     ],
   },

@@ -72,19 +72,29 @@ const Testimoni = () => {
                   key={d.name}
                   className="bg-white h-[300px]  text-black rounded-3xl shadow-md"
                 >
-                  <div className="h-36 flex pl-10 pt-10 rounded-t-xl">
-                    <img
-                      src={d.img}
-                      alt=""
-                      className="h-12 w-12 rounded-full"
-                    />
-                    <div className=" pl-4 pt-1">
-                      <p className="text-xl text-left font-semibold">
-                        {d.name}
-                      </p>
-                      <span className="text-left text-gray-500">{d.univ}</span>
+                  <div className="flex justify-between">
+                    <div className="h-36 flex pl-10 pt-10 rounded-t-xl">
+                      <img
+                        src={d.img}
+                        alt=""
+                        className="h-12 w-12 rounded-full"
+                      />
+
+                      <div className=" pl-4 pt-1">
+                        <p className="text-xl text-left font-semibold">
+                          {d.name}
+                        </p>
+                        <span className="text-left text-gray-500">
+                          {d.univ}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center m-10 border border-black w-20 h-8 rounded-2xl">
+                      <img src="./src/assets/kid_star.svg" />
+                      <p>{d.rating}</p>
                     </div>
                   </div>
+
                   <div className="  mb-24 pb-24 px-20 mt-0">
                     <p className="text-xl  font-semibold">{d.review}</p>
                   </div>

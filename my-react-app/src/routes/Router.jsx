@@ -7,8 +7,8 @@ import AuthRoute from "../components/routes/AuthRoute";
 // Pages
 import LoginPage from "../components/pages/LoginPage";
 import RegisterPage from "../components/pages/RegisterPage";
-import Question from "../components/home/Question";
-import Question2 from "../components/home/Question2";
+import Question from "../components/home/question/Question";
+import Question2 from "../components/home/question/Question2";
 import Acc_Success from "../components/home/Acc_Success";
 import Landing_Page from "../components/pages/Landing_Page";
 import Subscribtion from "../components/pages/Subscription";
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
   {
     element: <AuthRoute />,
     children: [
+      {
+        path: "/",
+        element: <Landing_Page />,
+      },
       {
         path: "/landingpage",
         element: <Landing_Page />,

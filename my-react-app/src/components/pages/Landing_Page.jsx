@@ -33,23 +33,9 @@ const Landing_Page = () => {
           }
           btn={"Selengkapnya"}
         />
-        <Frequently />
+        {/* <Frequently /> */}
         <Footers />
       </div>
-
-      {/* <Mentor /> */}
-      {/* <div className="bg-blue-lp bg-cover">
-        <div className="block">
-          <p>Fitur Codegree</p>
-        </div>
-        <div className="flex justify-content:space-between ">
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul>
-        </div>
-      </div> */}
     </>
   );
 };

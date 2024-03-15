@@ -6,19 +6,14 @@ import Button from "./Button";
 function Pricing() {
   const navigate = useNavigate();
   return (
-    <div className="max-w-xl bg-white py-10 px-6 ">
-      <h5 className="border bg-blue-lp w-1/2 bg rounded-[10px] px-4 py-4  shadow 3-xl p-8 mb-4 text-xl  font-extrabold text-whitedark:text-gray-400">
-        Basic
+    <Card className="max-w-xl bg-white p-2 flex">
+      <h5 className="w-1/2 bg rounded-[10px] px-4 py-4  shadow 3-xl p-8 mb-4 text-xl  font-extrabold text-whitedark:text-gray-400">
+        Rincian pembayaran
       </h5>
-      <p className="text-left text-black">
-        Dapatkan akses untuk belajar programming dengan gamifikasi
-      </p>
+
       <div className="flex items-baseline text-black dark:text-black">
         <span className="text-3xl font-semibold">Rp</span>
         <span className="text-5xl font-extrabold tracking-tight">0</span>
-        <span className="ml-1 text-xl font-normal  text-black dark:text-gray-400">
-          /month
-        </span>
       </div>
       <ul className="my-7 space-y-5">
         <li className="flex space-x-3 ">
@@ -56,7 +51,7 @@ function Pricing() {
           </span>
         </li>
       </ul>
-    </div>
+    </Card>
   );
 }
 export default Pricing;

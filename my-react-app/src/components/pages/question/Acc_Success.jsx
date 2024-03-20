@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../ui/Button";
+import Button from "../../ui/Button";
 
-import Navbar from "../shared/Navbar";
+import Navbar from "../../shared/Navbar";
 const Acc_Success = () => {
   const navigate = useNavigate();
   return (

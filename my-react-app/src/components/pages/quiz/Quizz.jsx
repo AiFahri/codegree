@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button";
 
-const Question = () => {
+const Quizz = () => {
   const navigate = useNavigate();
   return (
     <React.Fragment>
@@ -18,7 +18,8 @@ const Question = () => {
           </Button>
 
           <h2 className="mt-5 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
-            Apa kesibukanmu saat ini?
+            Kerjakan Bab Konsep Pemrograman Dasar ini untuk bisa lanjut ke Bab
+            Tipe Data.
           </h2>
 
           <br></br>
@@ -52,4 +53,4 @@ const Question = () => {
   );
 };
 
-export default Question;
+export default Quizz;

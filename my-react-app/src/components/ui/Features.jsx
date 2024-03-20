@@ -1,7 +1,7 @@
 // motion
 import { motion } from "framer-motion";
 // variants
-import { fadeIn } from "/Ai/BCC Internship - Codegree/my-react-app/src/variants";
+import { fadeIn } from "../variants/variants";
 
 const Features = () => {
   return (
@@ -13,8 +13,8 @@ const Features = () => {
       className="text-center my-8"
     >
       <div className="mb-40">
-        <h3 className="text-black text-3xl font-bold  mb-8 text-center mt-40">
-          Fitur Unggulan <span className="text-blue-lp">Codegree</span>
+        <h3 className="text-black text-3xl font-bold  mb-8 text-center mt-20">
+          Fitur Unggulan <span className="text-blue-cd">Codegree</span>
         </h3>
 
         <div class="flex flex-row justif mt-16 gap-0 ">

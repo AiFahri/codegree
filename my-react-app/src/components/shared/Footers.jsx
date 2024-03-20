@@ -11,7 +11,7 @@ import {
 
 const Footers = () => {
   return (
-    <div className="bg-blue-lp w-full text-white ">
+    <div className="bg-blue-cd w-full text-white ">
       <div className="grid w-full p-6 justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
         <div className="">
           <Footer.Brand

@@ -5,7 +5,7 @@ import RegisterForm from "../auth/RegisterForm.jsx";
 const RegisterPage = () => {
   return (
     <MainLayout>
-      <main className=" flex flex-col items-center w-full">
+      <main className=" flex flex-col items-center w-full mt-6">
         <RegisterForm />
       </main>
     </MainLayout>

@@ -5,26 +5,26 @@ import { useNavigate } from "react-router-dom";
 
 import Input from "../ui/Input";
 import Button from "../ui/Button";
-import Acc_Success from "../home/Acc_Success";
-// import { handleLogin } from "../../api/services/auth";
+import Acc_Success from "../pages/question/Acc_Success";
+import { handleRegister } from "../../api/services/auth";
 
 const RegisterForm = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
+    name: "",
     email: "",
     password: "",
-    // confirmpassword:"",
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(form);
 
     try {
-      // const response = await handleLogin(form);
-      // window.localStorage.setItem("token", response.data.token);
+      const response = await handleRegister(form);
+
       setTimeout(() => {
-        navigate("/acc_success");
+        console.log(form);
+        navigate("/login");
       }, 1000);
     } catch (error) {
       console.log(error);
@@ -35,7 +35,7 @@ const RegisterForm = () => {
     <React.Fragment>
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img className="mx-auto h-40 w-auto" src=".\src\assets\rafiki.svg" />
+          <img className="mx-auto h-32 w-auto" src=".\src\assets\rafiki.svg" />
           {/* TITLE PART  */}
           <h2 className="mt-7 text-center text-2xl font-inter font-bold leading-9 tracking-tight text-gray-900">
             Daftar Akun Codegree
@@ -48,16 +48,18 @@ const RegisterForm = () => {
         <form className="space-y-2" onSubmit={(e) => handleSubmit(e)}>
           <div>
             <Input
-              type="text"
-              label={"Username"}
+              type="name"
+              label={"Nama Lengkap"}
               name={"name"}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
+              required={true}
               autoComplete="no"
             />
           </div>
           <div>
             <Input
               type="email"
-              label={"Email"}
+              label={"E-mail"}
               name={"email"}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               required={true}

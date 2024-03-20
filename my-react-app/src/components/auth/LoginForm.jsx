@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import router from "../../routes/Router";
+import router from "../../routes/Router";
 
 import Input from "../ui/Input";
 import Button from "../ui/Button";
@@ -16,15 +16,14 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(handleLogin(form));
+
     try {
-      const response = await handleLogin(form);
-      window.localStorage.setItem("token", response.data.token);
-      setTimeout(() => {
-        navigate("/question");
-      }, 1000);
+      await handleLogin(form);
+
+      navigate("/question");
     } catch (error) {
       alert("Email atau Password Anda Salah!");
+      console.log(error);
     }
   };
 
@@ -46,7 +45,7 @@ const LoginForm = () => {
           <div>
             <Input
               type="email"
-              label={"Email"}
+              label={"E-mail"}
               name={"email"}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               required={true}

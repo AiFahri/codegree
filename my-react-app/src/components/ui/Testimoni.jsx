@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 // motion
 import { motion } from "framer-motion";
 // variants
-import { fadeIn } from "/Ai/BCC Internship - Codegree/my-react-app/src/variants";
+import { fadeIn } from "../variants/variants";
 
 const data = [
   {
@@ -51,7 +51,7 @@ const Testimoni = () => {
         className="text-center my-8"
       >
         <h3 className="text-black text-3xl font-bold  mb-2 text-center">
-          Testimonial Pengguna <span className="text-blue-lp">Codegree</span>
+          Testimonial Pengguna <span className="text-blue-cd">Codegree</span>
         </h3>
       </motion.div>
       <motion.div

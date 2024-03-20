@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-20 w-full h-50 flex justify-center items-center p-4 bg-blue-lp shadow-md">
+    <nav className="fixed top-0 left-0 z-20 w-full h-50 flex justify-center items-center p-4 bg-blue-cd shadow-md">
       <div className="w-screen px-3 md:px-5 2xl:w-[1440px] flex justify-between">
         {/* LEFT SECTION - LOGO */}
         <div className="flex gap-2 md:gap-4 items-center">
@@ -33,7 +33,7 @@ const Navbar = () => {
           <Button
             type={"button"}
             variation={"home"}
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/dashboard")}
           >
             Home
           </Button>

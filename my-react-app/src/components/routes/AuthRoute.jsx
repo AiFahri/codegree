@@ -3,8 +3,8 @@ import { useAuth } from "../../hooks/useAuth";
 
 const AuthRoute = () => {
   const isAuthenticated = useAuth();
-
-  return isAuthenticated ? <Navigate to="/" replace={true} /> : <Outlet />;
+  //page utk yg belom lgin
+  return isAuthenticated ? <Navigate to="/landingpage" /> : <Outlet />;
 };
 
 export default AuthRoute;

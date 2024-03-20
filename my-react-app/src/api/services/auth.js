@@ -6,7 +6,7 @@ const handleLogin = async (body) => {
       email: body.email,
       password: body.password,
     });
-    return response.data;
+    window.localStorage.setItem("token", response.data.token);
   } catch (error) {
     throw error;
   }
@@ -25,5 +25,6 @@ const handleRegister = async (body) => {
     throw error;
   }
 };
+
 
 export { handleLogin, handleRegister };

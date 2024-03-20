@@ -6,13 +6,17 @@ import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
 
-const Banner = ({ heading, subheading, variation, className, btn }) => {
+const Banner_dashboard = ({
+  heading,
+  subheading,
+  variation,
+  className,
+  btn,
+}) => {
   const navigate = useNavigate();
   const getBannerVariation = (variation) => {
     switch (variation) {
       case "primary":
-        return "bg-blue-cd w-full h-[610px] md:p-9  px-4  py-4";
-      case "secondary":
         return "bg-white w-full h-[610px] text-black md:p-9  px-4  py-4";
       default:
         return "";
@@ -29,7 +33,7 @@ const Banner = ({ heading, subheading, variation, className, btn }) => {
       <div
         className={`${getBannerVariation(
           variation
-        )}bg-blue-lp w-full h-[500px] md:p-9  px-4  py-4 ${className}`}
+        )}bg-blue-lp w-full h-[610px] md:p-9  px-4  py-4 ${className}`}
       >
         <div className="flex flex-col md:flex-row-reverse my-20 justify-between items-center gap-10">
           {/* Banner image  */}
@@ -38,13 +42,6 @@ const Banner = ({ heading, subheading, variation, className, btn }) => {
               src="../src/assets/amico.svg"
               className="w-[350px] h-[350px]"
             />
-            <p className="mt-6 text-white">
-              Ragu? Coba{" "}
-              <a href="/subscription" className="text-white ">
-                Free Trial
-              </a>{" "}
-              selama 14 hari!
-            </p>
           </div>
           {/* Banner content  */}
           <div className="md:w-1/2">
@@ -56,9 +53,9 @@ const Banner = ({ heading, subheading, variation, className, btn }) => {
             </h3>
             <Button
               type={"button"}
-              className="w-4/5 text-blue-lp bg-white hover:bg-blue-txt  hover:text-white border hover:border-white mt-20"
-              variation={"secondary"}
-              onClick={() => navigate("/signup")}
+              className="w-4/5 text-blue-lp bg-blue-cd hover:bg-blue-txt  hover:text-white border hover:border-white mt-20"
+              variation={"primary"}
+              onClick={() => navigate("/course")}
             >
               {btn}
             </Button>
@@ -71,4 +68,4 @@ const Banner = ({ heading, subheading, variation, className, btn }) => {
     </motion.div>
   );
 };
-export default Banner;
+export default Banner_dashboard;

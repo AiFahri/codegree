@@ -4,8 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 // motion
 import { motion } from "framer-motion";
 // variants
-import { fadeIn } from "/Ai/BCC Internship - Codegree/my-react-app/src/variants";
+import { fadeIn } from "../variants/variants";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const data = [
   {
@@ -57,6 +58,7 @@ const Course_card = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
   };
+  const navigate = useNavigate();
   return (
     <>
       <motion.div
@@ -109,7 +111,7 @@ const Course_card = () => {
                       Mulai
                     </Button>
 
-                    <div className="pl-4 text-left ">
+                    <div className="pl-4 pt-4 mt-4 text-left ">
                       <img src={d.registered} className="" />
                       <p className="text-xs ">{d.total}</p>
                     </div>

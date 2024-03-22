@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button";
 import { getQuestion, postAnswer } from "../../../api/services/question";
-
+import Image from "../../../../src/assets/arrow_back.svg";
 const Question = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
@@ -54,7 +54,7 @@ const Question = () => {
             variation={"back"}
             onClick={() => navigate("/acc_success")}
           >
-            <img src=".\src\assets\arrow_back.svg" alt="" width="25px" />
+            <img src={Image} alt="" width="25px" />
           </Button>
           {/* data[currentIdx].question */}
 

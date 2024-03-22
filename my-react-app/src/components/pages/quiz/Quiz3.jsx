@@ -1,7 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button";
-import Navbar from "../../shared/Navbar";
+import Navbar from "../../../shared/Navbar";
+import Image from "../../../../src/assets/arrow_back.svg";
+import Image1 from "../../../../src/assets/correct.svg";
 
 const Quiz3 = () => {
   const navigate = useNavigate();
@@ -16,7 +18,7 @@ const Quiz3 = () => {
             variation={"back"}
             onClick={() => navigate("/quiz")}
           >
-            <img src=".\src\assets\arrow_back.svg" alt="" width="25px" />
+            <img src={Image} alt="" width="25px" />
           </Button>
 
           <h2 className="mt-5 text-center text-xl font-bold leading-9 tracking-tight text-gray-900">
@@ -26,7 +28,7 @@ const Quiz3 = () => {
 
           <br></br>
           <div className="border border-blue-cd rounded p-4">
-            <img src=".\src\assets\correct.svg" alt="" width="25px" />
+            <img src={Image1} alt="" width="25px" />
             <p className="text-black text-base font-semibold">
               Wowww, Jawabanmu Benar! :
             </p>

@@ -2,6 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button";
 import Navbar from "../../shared/Navbar";
+import Image from "../../../../src/assets/arrow_back.svg";
+import Image1 from "../../../../src/assets/java_1.svg";
+import Image2 from "../../../../src/assets/maki_caution.svg";
 
 const Quizz = () => {
   const navigate = useNavigate();
@@ -16,24 +19,18 @@ const Quizz = () => {
             variation={"back"}
             onClick={() => navigate("/course")}
           >
-            <img src=".\src\assets\arrow_back.svg" alt="" width="25px" />
+            <img src={Image} alt="" width="25px" />
           </Button>
 
           <h2 className="mt-5 text-center text-xl font-bold leading-9 tracking-tight text-gray-900">
             Kerjakan Bab Konsep Pemrograman Dasar ini untuk bisa lanjut ke Bab
             Tipe Data.
           </h2>
-          <img
-            src="../../src/assets/java_1.svg"
-            className="w-[150px] h-[150px] mx-auto"
-          />
+          <img src={Image1} className="w-[150px] h-[150px] mx-auto" />
 
           <br></br>
           <div>
-            <img
-              src="../../src/assets/maki_caution.svg"
-              className="w-[50px] h-[50px] "
-            />
+            <img src={Image2} className="w-[50px] h-[50px] " />
             <p className="text-black text-base">
               Quiz ini berisi 20 soal.{" "}
               <span className="text-blue-cd font-bold">

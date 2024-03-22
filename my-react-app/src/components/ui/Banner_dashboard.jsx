@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
+import Image from "../../../src/assets/amico.svg";
 
 const Banner_dashboard = ({
   heading,
@@ -39,7 +40,7 @@ const Banner_dashboard = ({
           {/* Banner image  */}
           <div className="-w-1/2">
             <img
-              src="../../../src/assets/amico.svg"
+              src={Image}
               className="w-[350px] h-[350px]"
             />
           </div>

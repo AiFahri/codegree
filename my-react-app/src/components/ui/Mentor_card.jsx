@@ -8,6 +8,8 @@ import { fadeIn } from "../variants/variants";
 import { useEffect, useState } from "react";
 import { getMentor } from "../../api/services/mentor";
 import { useNavigate } from "react-router-dom";
+import Image from "../../../src/assets/unsplash_mentor.png";
+import Image1 from "../../../src/assets/logo_ui.png";
 
 // const data = [
 //   {
@@ -139,31 +141,33 @@ const Mentor_card = () => {
                 </div>
               ) : (
                 data.map((d) => (
-                  <div
-                    key={d.name}
-                    className="bg-white h-[400px]  text-black rounded-xl"
-                  >
-                    <div className="h-40 bg-blue-cd flex justify-center items-center rounded-3xl">
-                      <img src={d.img} alt="" className="h-40 w-full" />
-                    </div>
+                  <a href="whatsapp://send?text=Hello&phone=+62895800357866">
+                    <div
+                      key={d.name}
+                      className="bg-white h-[400px]  text-black rounded-2xl overflow-hidden"
+                    >
+                      <div className="h-40 flex justify-center items-center  rounded-t-xl">
+                        <img src={Image} alt="" className="h-40 w-full" />
+                      </div>
 
-                    <div className="flex flex-col  justify-center  p-4">
-                      <p className="text-lg text-left font-semibold">
-                        {d.name}
-                      </p>
-                      <p className="text-left text-xs mt-0">{d.language}</p>
-                      <p className="text-left text-xs text-gray-500 mt-4">
-                        {d.description}
-                      </p>
-                    </div>
-                    <div className="flex p-4">
-                      <img src="./src/assets/logo_ui.png" />
-                      <div className="pl-4 text-left ">
-                        <p className="text-base font-semibold">{d.company}</p>
-                        <span className="text-xs ">{d.faculty}</span>
+                      <div className="flex flex-col  justify-center  p-4">
+                        <p className="text-lg text-left font-semibold">
+                          {d.name}
+                        </p>
+                        <p className="text-left text-xs mt-0">{d.language}</p>
+                        <p className="text-left text-xs text-gray-500 mt-4">
+                          {d.description}
+                        </p>
+                      </div>
+                      <div className="flex items-center p-4">
+                        <img className="w-[35px] h-[35px]" src={Image1} />
+                        <div className="pl-4 text-left ">
+                          <p className="text-base font-semibold">{d.company}</p>
+                          <span className="text-xs ">{d.faculty}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 ))
               )}
             </Slider>

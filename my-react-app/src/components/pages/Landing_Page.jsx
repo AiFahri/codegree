@@ -14,12 +14,13 @@ import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
 import DropDownnn from "../ui/DropDownnn";
+import Navbar_dashboard from "../shared/Navbar_dashboard";
 
 const Landing_Page = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Navbar />
+      <Navbar_dashboard />
       <div className=" max-w-screen-2xl mx-auto mt-12">
         <Banner
           // banner={"../src/assets/amigo.svg"}
@@ -53,7 +54,7 @@ const Landing_Page = () => {
           subheading={
             "Dengan Mengaktifkan  Monthly Subcription kamu bisa mendapatkan Infinite Hearts hingga akses unlimited untuk semua kelas!"
           }
-          btn={"Selengkapnya"}
+          btn={"Berlangganan Sekarang"}
         />
         <Frequently />
         <Footers />

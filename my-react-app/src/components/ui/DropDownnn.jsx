@@ -8,7 +8,8 @@ function DropDownnn() {
         </div>
         <div className="collapse-content text-black">
           <p>
-            Caranya adalah dengan menyelesaikan course dan quiz sampai akhir
+            Caranya adalah dengan berlanggan premium dan menyelesaikan course &
+            quiz sampai akhir
           </p>
         </div>
       </div>

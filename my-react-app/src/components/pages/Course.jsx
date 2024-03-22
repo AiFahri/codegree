@@ -1,13 +1,13 @@
-import Navbar from "../shared/Navbar";
 import ProgressBar from "../ui/ProgressBar";
-import Title from "../ui/Title";
 import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
+import Footers_course from "../shared/Footers_course";
+import Navbar_dashboard from "../shared/Navbar";
 const Course = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Navbar />
+      <Navbar_dashboard />
 
       <div className="mt-20">
         <Button
@@ -82,15 +82,8 @@ const Course = () => {
             <strong>Kelas dan Objek Statik:</strong> Anggota kelas yang dideklar
           </li>
         </ul>
-        <Button
-          type={"text"}
-          className="mt-6"
-          variation={"primary"}
-          onClick={() => navigate("/quiz")}
-        >
-          Lanjut
-        </Button>
       </div>
+      <Footers_course />
     </>
   );
 };

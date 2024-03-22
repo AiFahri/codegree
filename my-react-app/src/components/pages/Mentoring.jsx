@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "../ui/Button";
-import Navbar from "../shared/Navbar";
 import { useNavigate } from "react-router-dom";
 import Mentor_card from "../ui/Mentor_card";
 import Footers from "../shared/Footers";
@@ -9,12 +8,13 @@ import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
 import Title from "../ui/Title";
+import Navbar_dashboard from "../shared/Navbar";
 
 const Mentoring = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Navbar />
+      <Navbar_dashboard />
       <div className=" max-w-screen-2xl mx-auto mt-12">
         <div className="mt-20">
           <Title

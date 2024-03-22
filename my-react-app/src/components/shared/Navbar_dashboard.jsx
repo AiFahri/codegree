@@ -6,7 +6,7 @@ import Akun from "../../../src/assets/Vector (1).svg";
 import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar_dashboard = () => {
   const isAuthenticated = useAuth();
   const navigate = useNavigate();
 
@@ -24,35 +24,39 @@ const Navbar = () => {
             <img action="#" src={Logo} alt="Logo" className="h-8 w-50 ml-2" />
           </a>
         </div>
-        <div className="flex items-center gap-10">
-          <a
-            href="/mentoring"
-            className="active:underline underline-offset-2 text-white"
-          >
-            Mentor
-          </a>
-          <a
-            href="/course"
-            className="active:underline active:text-white underline-offset-2 text-white"
-          >
-            Course
-          </a>
-          <a
-            href="/subscription"
-            className="active:underline underline-offset-2 text-white"
-          >
-            Subscription
-          </a>
-        </div>
 
         {/* RIGHT SECTION - BUTTONS */}
+
         <div className="flex gap-2 md:gap-4 h-100">
-          <img src={Heart} />
-          <img src={Akun} />
+          <Button
+            type={"button"}
+            variation={"home"}
+            onClick={() => navigate("/dashboard")}
+          >
+            Home
+          </Button>
+
+          {isAuthenticated ? (
+            <Button
+              type={"button"}
+              variation={"secondary"}
+              onClick={() => handleLogout()}
+            >
+              Log Out
+            </Button>
+          ) : (
+            <Button
+              type={"button"}
+              variation={"login"}
+              onClick={() => navigate("/login")}
+            >
+              Log In
+            </Button>
+          )}
         </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default Navbar_dashboard;

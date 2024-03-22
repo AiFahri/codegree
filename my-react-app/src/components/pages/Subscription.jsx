@@ -4,10 +4,13 @@ import Payment from "../ui/Payment";
 import Navbar from "../shared/Navbar";
 import Footers from "../shared/Footers";
 
+import Button from "../ui/Button";
+
 const Subscribtion = () => {
   return (
     <>
       <Navbar />
+
       <div className="mt-32">
         <div className="px-32">
           <h2 className="text-black text-center text-4xl font-bold">
@@ -23,7 +26,7 @@ const Subscribtion = () => {
         <Pricing />
         <Pricing2 />
       </div>
-      <div className="mt-10">
+      <div className="mt-10 m-0 ">
         <Footers />
       </div>
     </>

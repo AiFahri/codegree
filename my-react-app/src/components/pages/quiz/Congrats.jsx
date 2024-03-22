@@ -1,15 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button";
-import Navbar from "../../shared/Navbar";
 import Image from "../../../../src/assets/arrow_back.svg";
 import Image1 from "../../../../src/assets/rafiki_2.svg";
+import Navbar_dashboard from "../../shared/Navbar";
 
 const Congrats = () => {
   const navigate = useNavigate();
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar_dashboard />
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <Button
@@ -32,7 +32,7 @@ const Congrats = () => {
             type={"text"}
             className="mt-6"
             variation={"primary"}
-            onClick={() => navigate("/course")}
+            onClick={() => navigate("/dashboard")}
           >
             Lanjut ke Bab Tipe Data
           </Button>

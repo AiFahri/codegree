@@ -79,41 +79,43 @@ const Course_card = () => {
         viewport={{ once: false, amount: 0.7 }}
         className="text-center my-8"
       >
-        <div className="w-5/6 m-auto">
+        <div className="w-5/6 m-auto ">
           <div className="mt-15">
             <Slider
               {...settings}
-              className="grid grid-cols-2 md:grid-cols-5 mx-10"
+              className="grid grid-cols-3 md:grid-cols-5 mx-10"
             >
               {data.map((d) => (
                 <div
                   key={d.name}
-                  className="bg-white h-[500px]  text-black rounded-xl"
+                  className="bg-white h-[450px]  text-black rounded-xl "
                 >
-                  <div className="h-40 bg-white flex justify-center items-center rounded-3xl">
-                    <img src={d.img} alt="" className="h-40 w-full" />
-                  </div>
+                  <div className="grid grid-rows-3">
+                    <div className="h-40 bg-white flex justify-center rounded-3xl">
+                      <img src={d.img} alt="" className="h-40 w-full" />
+                    </div>
 
-                  <div className="flex flex-col  justify-center  p-4">
-                    <p className="text-lg text-center font-semibold">
-                      {d.name}
-                    </p>
-                    <p className="text-center text-xs text-gray-500 mt-4">
-                      {d.description}
-                    </p>
-                  </div>
-                  <div className="flex p-4">
-                    <Button
-                      type={"button"}
-                      className="border border-gray-400 mt-6 w-[120px]"
-                      onClick={() => navigate("/course")}
-                    >
-                      Mulai
-                    </Button>
+                    <div className="flex flex-col  justify-center  px-4">
+                      <p className="text-lg text-center font-semibold">
+                        {d.name}
+                      </p>
+                      <p className="text-center text-xs text-gray-500 mt-4">
+                        {d.description}
+                      </p>
+                    </div>
+                    <div className="flex px-4 justify-center items-center">
+                      <Button
+                        type={"button"}
+                        className="border border-gray-400 mt-6 w-[100px] h-[50px]"
+                        onClick={() => navigate("/course")}
+                      >
+                        Mulai
+                      </Button>
 
-                    <div className="pl-4 pt-4 mt-4 text-left ">
-                      <img src={d.registered} className="" />
-                      <p className="text-xs ">{d.total}</p>
+                      <div className="pl-4 pt-4 mt-4 text-left ">
+                        <img src={d.registered} className="" />
+                        <p className="text-xs ">{d.total}</p>
+                      </div>
                     </div>
                   </div>
                 </div>

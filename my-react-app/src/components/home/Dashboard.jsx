@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-import Navbar from "../shared/Navbar";
 import Mentor_card from "../ui/Mentor_card";
 import Testimoni from "../ui/Testimoni";
 import Footers from "../shared/Footers";
@@ -11,11 +10,12 @@ import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
 import Banner_dashboard from "../ui/Banner_dashboard";
+import Navbar_dashboard from "../shared/Navbar";
 
 const Dashboard = () => {
   return (
     <>
-      <Navbar />
+      <Navbar_dashboard />
       <div className=" max-w-screen-2xl mx-auto mt-12 ">
         <Banner_dashboard
           // banner={"../src/assets/amigo.svg"}
@@ -32,7 +32,7 @@ const Dashboard = () => {
           viewport={{ once: false, amount: 0.7 }}
           className="text-left my-8"
         >
-          <h3 className="text-black text-3xl font-bold  mb-8 text-left pl-24  mt-20">
+          <h3 className="text-black text-3xl font-bold   text-left pl-24  mt-20">
             Course Kamu
           </h3>
         </motion.div>

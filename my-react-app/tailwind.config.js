@@ -16,6 +16,7 @@ module.exports = {
         "blue-lp": "#5E5DEC",
         "blue-txt": "#8685F1",
         "grey-txt": "#8F8F8F",
+        "red-cd": "#EC905D",
       },
     },
   },

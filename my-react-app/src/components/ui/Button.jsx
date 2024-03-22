@@ -20,7 +20,7 @@ const Button = ({
       case "third":
         return "flex w-full justify-center rounded-md bg-white-600 px-3 py-3 text-sm font-semibold font-blue-cd leading-6 text-black shadow-sm hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600";
       case "back":
-        return " width=25px bg-transparent flex positon relative right-[80%] top-0";
+        return " width=25px bg-transparent flex position relative right-[80%] top-0";
       case "home":
         return "flex w- justify-center rounded-md bg-blue-cd px-3 py-1.5 text-sm font-semibold leading-6 text-white hover:text-blue-cd shadow-sm hover:bg-white border border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600";
       case "login":

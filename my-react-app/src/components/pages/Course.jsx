@@ -3,6 +3,8 @@ import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
 import Footers_course from "../shared/Footers_course";
 import Navbar_dashboard from "../shared/Navbar";
+import Image from "../../../src/assets/ep_back.svg";
+import Image1 from "../../../src/assets/java.png";
 const Course = () => {
   const navigate = useNavigate();
   return (
@@ -16,7 +18,7 @@ const Course = () => {
           variation={"back"}
           onClick={() => navigate("/dashboard")}
         >
-          <img src="../src/assets/ep_back.svg" alt="" width="25px" />
+          <img src={Image} alt="" width="25px" />
         </Button>
         <h3 className="text-black text-xl  text-left px-32 pb-5">
           Java <ProgressBar />
@@ -29,7 +31,7 @@ const Course = () => {
           Konsep Pemrograman Dasar
         </h2>
 
-        <img src="./src/assets/java.png" />
+        <img src={Image1} />
       </div>
       <div className="mt-2 px-24 text-black text-left">
         <h3 className="font-bold text-xl">

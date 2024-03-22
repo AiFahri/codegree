@@ -16,11 +16,12 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      await handleLogin(form);
-
-      navigate("/question");
+      const response = await handleLogin(form);
+      window.localStorage.setItem("token", response.data.token);
+      setTimeout(() => {
+        navigate("/question");
+      }, 1000);
     } catch (error) {
       alert("Email atau Password Anda Salah!");
       console.log(error);

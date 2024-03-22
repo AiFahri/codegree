@@ -19,6 +19,10 @@ import ResultCourse from "../components/pages/question/ResultCourse";
 import Mentoring from "../components/pages/Mentoring";
 import Course from "../components/pages/Course";
 import Quizz from "../components/pages/quiz/Quizz";
+import Quiz2 from "../components/pages/quiz/Quiz2";
+import Congrats from "../components/pages/quiz/Congrats";
+import Sertif from "../components/pages/Sertif";
+import Quiz3 from "../components/pages/quiz/Quiz3";
 
 const router = createBrowserRouter([
   {
@@ -74,7 +78,24 @@ const router = createBrowserRouter([
     path: "/quiz",
     element: <Quizz />,
   },
-//authroute
+  {
+    path: "/quiz2",
+    element: <Quiz2 />,
+  },
+  {
+    path: "/quiz3",
+    element: <Quiz3 />,
+  },
+  {
+    path: "/done",
+    element: <Congrats />,
+  },
+  {
+    path: "/sertif",
+    element: <Sertif />,
+  },
+
+  //authroute
   {
     element: <AuthRoute />,
     children: [

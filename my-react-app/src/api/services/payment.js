@@ -1,9 +1,9 @@
 import { axiosInstance } from "../coreApi";
 
-const getMentor = async () => {
+const getPayment = async () => {
   const token = window.localStorage.getItem("token");
   try {
-    const response = await axiosInstance.get("/get_mentors", {
+    const response = await axiosInstance.get("/create-payment", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + token,
@@ -15,5 +15,4 @@ const getMentor = async () => {
     throw error;
   }
 };
-
-export { getMentor };
+export {getPayment};

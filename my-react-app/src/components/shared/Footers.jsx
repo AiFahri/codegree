@@ -1,15 +1,11 @@
 "use client";
 
 import { Footer } from "flowbite-react";
-import {
-  BsDribbble,
-  BsFacebook,
-  BsGithub,
-  BsInstagram,
-  BsTwitter,
-} from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsTwitterX, BsYoutube } from "react-icons/bs";
 
 const Footers = () => {
+  const style = { color: "white", fontSize: "1.5em" };
+
   return (
     <div className="bg-blue-cd w-full text-white ">
       <div className="grid w-full p-6 justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
@@ -37,10 +33,10 @@ const Footers = () => {
           <div className="text-left text-white">
             <h5 className="font-bold mb-3">Resource</h5>
             <ul>
-              <a className="text-white text-sm block mb-3" href="#">
+              <a className="text-white text-sm block mb-3" href="/dashboard">
                 Home
               </a>
-              <a className="text-white text-sm block mb-3" href="#">
+              <a className="text-white text-sm block mb-3" href="/course">
                 Course
               </a>
               <a className="text-white text-sm block mb-3" href="#">
@@ -77,8 +73,13 @@ const Footers = () => {
         </div>
       </div>
 
-      <div className=" bg-blue-lp w-full sm:flex sm:items-center sm:justify-between">
-        <Footer.Copyright href="#" by="Codegree™" year={2024} />
+      <div className=" bg-blue-cd w-full sm:flex sm:items-center sm:justify-between">
+        <div className="mt-4 flex space-x-6 mb-10 sm:mt-0 mx-6">
+          <Footer.Icon href="#" icon={BsInstagram} style={style} />
+          <Footer.Icon href="#" icon={BsFacebook} style={style} />
+          <Footer.Icon href="#" icon={BsTwitterX} style={style} />
+          <Footer.Icon href="#" icon={BsYoutube} style={style} />
+        </div>
       </div>
     </div>
   );

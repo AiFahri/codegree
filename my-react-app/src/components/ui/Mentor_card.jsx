@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
+import { useEffect, useState } from "react";
+import { getMentor } from "../../api/services/mentor";
 
 const data = [
   {
@@ -69,6 +71,25 @@ const data = [
   },
 ];
 
+// const [data, setData] = useState([]);
+
+const handleMentor = async () => {
+  try {
+    const response = await getMentor();
+    console.log(response.data);
+    setData(response.data);
+  } catch (error) {
+    console.log(error);
+    if (error.response.data.error === "data not found") {
+      setData([]);
+    }
+  }
+};
+
+// useEffect(() => {
+//   handleMentor();
+// }, []);
+
 const Mentor_card = () => {
   const settings = {
     dots: false,
@@ -112,7 +133,7 @@ const Mentor_card = () => {
                       <p className="text-lg text-left font-semibold">
                         {d.name}
                       </p>
-                      <p className="text-left text-xs mt-0">{d.job}</p>
+                      <p className="text-left text-xs mt-0">{d.language}</p>
                       <p className="text-left text-xs text-gray-500 mt-4">
                         {d.archivement}
                       </p>

@@ -5,11 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
+import Image from "../../../src/assets/rina_round.png";
 
 const data = [
   {
     name: "Rina Sugiyem",
-    img: "src/assets/rina_round.png",
+    img: Image,
     univ: "Universitas Padjajaran",
     review:
       "Codegree membuat saya memahami programming dengan asyik! Mentor yang ada juga sangat informatif!",
@@ -17,7 +18,7 @@ const data = [
   },
   {
     name: "Rina Sugiyem",
-    img: "src/assets/rina_round.png",
+    img: Image,
     univ: "Universitas Padjajaran",
     review:
       "Codegree membuat saya memahami programming dengan asyik! Mentor yang ada juga sangat informatif!",
@@ -25,7 +26,7 @@ const data = [
   },
   {
     name: "Rina Sugiyem",
-    img: "src/assets/rina_round.png",
+    img: Image,
     univ: "Universitas Padjajaran",
     review:
       "Codegree membuat saya memahami programming dengan asyik! Mentor yang ada juga sangat informatif!",

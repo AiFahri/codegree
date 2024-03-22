@@ -35,7 +35,7 @@ const Sertif = () => {
             type={"text"}
             className="mt-6"
             variation={"primary"}
-            onClick={() => navigate("/course")}
+            onClick={() => navigate("/dashboard")}
           >
             Unduh Sertifikat
           </Button>

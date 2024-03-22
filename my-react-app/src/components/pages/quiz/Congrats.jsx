@@ -32,7 +32,7 @@ const Congrats = () => {
             type={"text"}
             className="mt-6"
             variation={"primary"}
-            onClick={() => navigate("/dashboard")}
+            onClick={() => navigate("/sertif")}
           >
             Lanjut ke Bab Tipe Data
           </Button>

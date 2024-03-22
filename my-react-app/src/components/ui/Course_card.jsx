@@ -7,11 +7,15 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants/variants";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import Image from "../../../src/assets/java.png";
+import Image1 from "../../../src/assets/Group 34.svg";
+import Image2 from "../../../src/assets/Mask group.svg";
+import Image3 from "../../../src/assets/people_grup.png";
 
 const data = [
   {
     name: "Java",
-    img: "src/assets/java.png",
+    img: Image,
     description: (
       <p>
         Bahasa Java adalah salah satu bahasa pemrograman yang paling populer dan
@@ -19,24 +23,24 @@ const data = [
         pengembang perangkat lunak dalam berbagai jenis proyek pengembangan.
       </p>
     ),
-    registered: "src/assets/people_grup.png",
+    registered: Image3,
     total: "215+ org",
   },
   {
     name: "Javascript",
-    img: "src/assets/java.png",
+    img: Image1,
     description: (
       <p>
         JavaScript adalah bahasa pemrograman tingkat tinggi yang digunakan untuk
         membuat dan mengontrol konten interaktif pada halaman web.
       </p>
     ),
-    registered: "src/assets/people_grup.png",
+    registered: Image3,
     total: "215+ org",
   },
   {
     name: "Flutter",
-    img: "src/assets/java.png",
+    img: Image2,
     description: (
       <p>
         Flutter adalah kerangka kerja pengembangan perangkat lunak open-source
@@ -45,7 +49,7 @@ const data = [
         menggunakan satu basis kode sumber.
       </p>
     ),
-    registered: "src/assets/people_grup.png",
+    registered: Image3,
     total: "310+ org",
   },
 ];

@@ -36,13 +36,6 @@ const Banner = ({ heading, subheading, variation, className, btn }) => {
           {/* Banner image  */}
           <div className="-w-1/2">
             <img src={BannerImg} className="w-[350px] h-[350px]" />
-            <p className="mt-6 text-white">
-              Ragu? Coba{" "}
-              <a href="/subscription" className="text-white ">
-                Free Trial
-              </a>{" "}
-              selama 14 hari!
-            </p>
           </div>
           {/* Banner content  */}
           <div className="md:w-1/2">
@@ -56,7 +49,7 @@ const Banner = ({ heading, subheading, variation, className, btn }) => {
               type={"button"}
               className="w-4/5 text-blue-lp bg-white hover:bg-blue-txt  hover:text-white border hover:border-white mt-20"
               variation={"secondary"}
-              onClick={() => navigate("/signup")}
+              onClick={() => navigate("/dashboard")}
             >
               {btn}
             </Button>

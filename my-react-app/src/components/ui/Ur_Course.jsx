@@ -7,6 +7,7 @@ import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
 import Book from "../../../src/assets/book_5.svg";
 import Kuis from "../../../src/assets/quiz.svg";
+import ProgressBar from "./ProgressBar";
 
 // const data = [
 //   {
@@ -50,14 +51,7 @@ const Ur_Course = () => {
                   Pelajari konsep pemrograman dasar dengan bahasa Java untuk
                   melatih skill fundamentalmu dalam dunia coding.
                 </p>
-                <div class="flex w-[100%] justify-between">
-                  <div class="bg-gray-800 w-[100%] rounded-lg">
-                    <div class="w-[20%] bg-blue-cd rounded-lg">
-                      <span>"</span>
-                    </div>
-                  </div>
-                  <p class="ml-2">20%</p>
-                </div>
+                <ProgressBar />
               </div>
               <div class="p-10">
                 <p class="border-b-2 border-black  mb-2 font-bold text-left ">

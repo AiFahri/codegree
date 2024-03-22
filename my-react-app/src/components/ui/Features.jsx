@@ -20,37 +20,37 @@ const Features = () => {
           Fitur Unggulan <span className="text-blue-cd">Codegree</span>
         </h3>
 
-        <div class="flex flex-row justif mt-16 gap-0 ">
+        <div className="flex flex-row justif mt-16 gap-0 ">
           <div className="basis-4/12 ">
-            <div class="shadow-lg bg-white rounded-3xl p-5 w-[50%] mx-auto">
+            <div className="shadow-lg bg-white rounded-3xl p-5 w-[50%] mx-auto">
               <img class="w-[70%]  mx-auto rounded-lg" src={Mentoring} />
             </div>
-            <h2 class="mt-4 text-2xl text-center text-black font-bold">
+            <h2 className="mt-4 text-2xl text-center text-black font-bold">
               Mentoring
             </h2>
-            <p class="text-center text-gray-500 mt-3 px-16">
+            <p className="text-center text-gray-500 mt-3 px-16">
               Mentor berkualitas siap menjawab apapun kesulitanmu!
             </p>
           </div>
-          <div className="basis-4/12">
-            <div class="shadow-lg bg-white rounded-3xl p-5 w-[50%] mx-auto">
-              <img class="w-[70%]  mx-auto rounded-lg" src={book} />
+          <div classNameName="basis-4/12">
+            <div className="shadow-lg bg-white rounded-3xl p-5 w-[50%] mx-auto">
+              <img className="w-[70%]  mx-auto rounded-lg" src={book} />
             </div>
-            <h2 class="mt-4 text-2xl text-center text-black font-bold">
+            <h2 className="mt-4 text-2xl text-center text-black font-bold">
               Terstruktur
             </h2>
-            <p class="text-center text-gray-500 mt-3 px-16 ">
+            <p className="text-center text-gray-500 mt-3 px-16 ">
               Course yang ada didesign mulai dari dasar hingga yang kompleks
             </p>
           </div>
-          <div className="basis-4/12">
-            <div class="shadow-lg bg-white rounded-3xl p-5 w-[50%] mx-auto">
-              <img class="w-[70%]  mx-auto rounded-lg" src={game} />
+          <div classNameName="basis-4/12">
+            <div className="shadow-lg bg-white rounded-3xl p-5 w-[50%] mx-auto">
+              <img className="w-[70%]  mx-auto rounded-lg" src={game} />
             </div>
-            <h2 class="mt-4 text-2xl text-center text-black font-bold">
+            <h2 className="mt-4 text-2xl text-center text-black font-bold">
               Gamifikasi
             </h2>
-            <p class="text-center text-gray-500 mt-3 px-16">
+            <p className="text-center text-gray-500 mt-3 px-16">
               Pembelajaran dilakukan secara menyenanagkan melalui kuis
             </p>
           </div>

@@ -77,7 +77,6 @@ import Image1 from "../../../src/assets/logo_ui.png";
 const handleMentor = async () => {
   try {
     const response = await getMentor();
-    console.log(response.data);
     setData(response.data);
   } catch (error) {
     console.log(error);
@@ -104,10 +103,9 @@ const Mentor_card = () => {
   const handleMentor = async () => {
     try {
       const response = await getMentor();
-      console.log(response.data);
+
       setData(response.data);
     } catch (error) {
-      console.log(error);
       if (error.response.data.error === "data not found") {
         setData([]);
       }

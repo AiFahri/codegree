@@ -39,60 +39,12 @@ const router = createBrowserRouter([
     element: <RegisterPage />,
   },
   {
-    path: "/acc_success",
-    element: <Acc_Success />,
-  },
-  // {
-  //   path: "/question",
-  //   element: <Question />,
-  // },
-  {
-    path: "/question2",
-    element: <Question2 />,
-  },
-  {
-    path: "/question3",
-    element: <Question3 />,
-  },
-  {
-    path: "/result",
-    element: <ResultCourse />,
-  },
-  {
-    path: "/subscription",
-    element: <Subscribtion />,
-  },
-  {
-    path: "/payment",
-    element: <Payment />,
-  },
-  {
-    path: "/mentoring",
-    element: <Mentoring />,
-  },
-  {
     path: "/course",
     element: <Course />,
   },
   {
-    path: "/quiz",
-    element: <Quizz />,
-  },
-  {
-    path: "/quiz2",
-    element: <Quiz2 />,
-  },
-  {
-    path: "/quiz3",
-    element: <Quiz3 />,
-  },
-  {
-    path: "/done",
-    element: <Congrats />,
-  },
-  {
-    path: "/sertif",
-    element: <Sertif />,
+    path: "/mentoring",
+    element: <Mentoring />,
   },
 
   //authroute
@@ -116,6 +68,43 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <RegisterPage />,
       },
+    ],
+  },
+  {
+    element: <ProtectedRoute />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/subscription",
+        element: <Subscribtion />,
+      },
+      {
+        path: "/payment",
+        element: <Payment />,
+      },
+      {
+        path: "/quiz",
+        element: <Quizz />,
+      },
+      {
+        path: "/quiz2",
+        element: <Quiz2 />,
+      },
+      {
+        path: "/quiz3",
+        element: <Quiz3 />,
+      },
+      {
+        path: "/done",
+        element: <Congrats />,
+      },
+      {
+        path: "/sertif",
+        element: <Sertif />,
+      },
       {
         path: "/acc_success",
         element: <Acc_Success />,
@@ -135,35 +124,6 @@ const router = createBrowserRouter([
       {
         path: "/result",
         element: <ResultCourse />,
-      },
-      {
-        path: "/subscription",
-        element: <Subscribtion />,
-      },
-      {
-        path: "/payment",
-        element: <Payment />,
-      },
-      {
-        path: "/mentoring",
-        element: <Mentoring />,
-      },
-      {
-        path: "/course",
-        element: <Course />,
-      },
-      {
-        path: "/quiz",
-        element: <Quizz />,
-      },
-    ],
-  },
-  {
-    element: <ProtectedRoute />,
-    children: [
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
       },
     ],
   },

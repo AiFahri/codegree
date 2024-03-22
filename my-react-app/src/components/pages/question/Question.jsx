@@ -16,7 +16,7 @@ const Question = () => {
   const handleQuestion = async () => {
     try {
       const response = await getQuestion();
-      console.log(response.data);
+
       setData(response.data);
     } catch (error) {
       console.log(error);
@@ -39,7 +39,7 @@ const Question = () => {
         navigate("/question2");
       }, 1000);
     } catch (error) {
-      alert("Jawaban anda salah!");
+      alert("Pilih Jawaban lain!");
       console.log(error);
     }
   };
@@ -72,7 +72,7 @@ const Question = () => {
                 onChange={(e) =>
                   setAnswer({ ...answer, question_id: e.target.value })
                 }
-                onClick={handleAnswer}
+                onClick={() => navigate("/question2")}
               >
                 {/* {console.log(item.options[1].description)} */}
                 {item.options[0].description}

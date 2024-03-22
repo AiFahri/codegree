@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button";
 import Image from "../../../../src/assets/arrow_back.svg";
+import Image1 from "../../../../src/assets/Group 46.png";
 import Navbar_dashboard from "../../shared/Navbar";
 
 const Quiz2 = () => {
@@ -24,7 +25,7 @@ const Quiz2 = () => {
             1. Dalam syntax konsep java untuk menampilkan output, apa syntax
             yang kurang dari gambar dibawah?
           </h2>
-
+          <img src={Image1} />
           <br></br>
           <div>
             <p className="text-black text-base">Pilih Jawaban :</p>
@@ -34,7 +35,7 @@ const Quiz2 = () => {
               type={"text"}
               className="mt-6"
               variation={"secondary"}
-              onClick={() => navigate("/done")}
+              onClick={"hover:blue-cd"}
             >
               );
             </Button>
@@ -42,7 +43,7 @@ const Quiz2 = () => {
               type={"text"}
               className="mt-6"
               variation={"secondary"}
-              onClick={() => navigate("/done")}
+              onClick={"hover:blue-cd"}
             >
               )
             </Button>
@@ -50,7 +51,7 @@ const Quiz2 = () => {
               type={"text"}
               className="mt-6"
               variation={"secondary"}
-              onClick={() => navigate("/done")}
+              onClick={"hover:blue-cd"}
             >
               ;
             </Button>
@@ -59,7 +60,7 @@ const Quiz2 = () => {
             type={"text"}
             className="mt-6"
             variation={"primary"}
-            onClick={() => navigate("/done")}
+            onClick={() => navigate("/quiz3")}
           >
             Submit
           </Button>

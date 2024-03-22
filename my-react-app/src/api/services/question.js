@@ -9,7 +9,6 @@ const getQuestion = async () => {
         Authorization: "Bearer " + token,
       },
     });
-    console.log(response.data);
     return response.data;
   } catch (error) {
     throw error;

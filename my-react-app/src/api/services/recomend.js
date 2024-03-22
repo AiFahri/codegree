@@ -9,7 +9,6 @@ const getRecomend = async () => {
         Authorization: "Bearer " + token,
       },
     });
-    console.log(response.data);
     return response.data;
   } catch (error) {
     throw error;
@@ -17,14 +16,14 @@ const getRecomend = async () => {
 };
 
 const postRecomend = async (body) => {
-    try {
-      const response = await axiosInstance.post("/recomend_language", {
-        question_id: body.question_id,
-      });
-      return response.data;
-    } catch (error) {
-      throw error;
-    }
-  };
+  try {
+    const response = await axiosInstance.post("/recomend_language", {
+      question_id: body.question_id,
+    });
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-  export { getRecomend, postRecomend  };
+export { getRecomend, postRecomend };

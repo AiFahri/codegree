@@ -9,10 +9,9 @@ const getPayment = async () => {
         Authorization: "Bearer " + token,
       },
     });
-    console.log(response.data);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
-export {getPayment};
+export { getPayment };

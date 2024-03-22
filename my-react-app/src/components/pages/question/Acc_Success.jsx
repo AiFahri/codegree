@@ -22,7 +22,7 @@ const Acc_Success = () => {
             type={"button"}
             className="mt-6"
             variation={"primary"}
-            onClick={() => navigate("/question2")}
+            onClick={() => navigate("/question")}
           >
             Mulai
           </Button>

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button";
 import Image from "../../../../src/assets/arrow_back.svg";
 import Image1 from "../../../../src/assets/correct.svg";
+import Image2 from "../../../../src/assets/Group 49.svg";
 import Navbar_dashboard from "../../shared/Navbar";
 
 const Quiz3 = () => {
@@ -25,11 +26,11 @@ const Quiz3 = () => {
             1. Dalam syntax konsep java untuk menampilkan output, apa syntax
             yang kurang dari gambar dibawah?
           </h2>
-
+          <img src={Image2} />
           <br></br>
-          <div className="border border-blue-cd rounded p-4">
+          <div className="flex border border-blue-cd rounded p-4 justify-center">
             <img src={Image1} alt="" width="25px" />
-            <p className="text-black text-base font-semibold">
+            <p className="text-black text-base font-semibold ml-4">
               Wowww, Jawabanmu Benar! :
             </p>
           </div>
@@ -38,7 +39,7 @@ const Quiz3 = () => {
             type={"text"}
             className="mt-6"
             variation={"primary"}
-            onClick={() => navigate("/sertif")}
+            onClick={() => navigate("/done")}
           >
             Lanjut
           </Button>

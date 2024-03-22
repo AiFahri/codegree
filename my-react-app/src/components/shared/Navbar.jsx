@@ -3,6 +3,7 @@ import Button from "../ui/Button";
 import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
+
 const Navbar = () => {
   const isAuthenticated = useAuth();
   const navigate = useNavigate();
@@ -18,10 +19,9 @@ const Navbar = () => {
         {/* LEFT SECTION - LOGO */}
         <div className="flex gap-2 md:gap-4 items-center">
           <a href="#">
-            {" "}
             <img
               action="#"
-              src="../src/assets/Group 24.svg"
+              src="../../../src/assets/Group 24.svg"
               alt="Logo"
               className="h-8 w-50 ml-2"
             />

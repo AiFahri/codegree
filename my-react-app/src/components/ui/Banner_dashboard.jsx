@@ -39,7 +39,7 @@ const Banner_dashboard = ({
           {/* Banner image  */}
           <div className="-w-1/2">
             <img
-              src="../src/assets/amico.svg"
+              src="../../../src/assets/amico.svg"
               className="w-[350px] h-[350px]"
             />
           </div>

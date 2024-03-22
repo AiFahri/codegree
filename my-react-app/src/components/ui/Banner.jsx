@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import BannerImg from "../../../src/assets/amico.svg";
 // motion
 import { motion } from "framer-motion";
 // variants
@@ -34,10 +35,7 @@ const Banner = ({ heading, subheading, variation, className, btn }) => {
         <div className="flex flex-col md:flex-row-reverse my-20 justify-between items-center gap-10">
           {/* Banner image  */}
           <div className="-w-1/2">
-            <img
-              src="../../../src/assets/amico.svg"
-              className="w-[350px] h-[350px]"
-            />
+            <img src={BannerImg} className="w-[350px] h-[350px]" />
             <p className="mt-6 text-white">
               Ragu? Coba{" "}
               <a href="/subscription" className="text-white ">

@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../ui/Button";
-import { Logo } from "../../../src/assets/Group 24.svg";
+import Logo from "../../../src/assets/Group 24.svg";
 import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 

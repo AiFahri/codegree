@@ -2,6 +2,9 @@
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
+import Mentoring from "../../../src/assets/mentoring.svg";
+import book from "../../../src/assets/book.svg";
+import game from "../../../src/assets/ps.svg";
 
 const Features = () => {
   return (
@@ -20,10 +23,7 @@ const Features = () => {
         <div class="flex flex-row justif mt-16 gap-0 ">
           <div className="basis-4/12 ">
             <div class="shadow-lg bg-white rounded-3xl p-5 w-[50%] mx-auto">
-              <img
-                class="w-[70%]  mx-auto rounded-lg"
-                src="../src/assets/mentoring.svg"
-              />
+              <img class="w-[70%]  mx-auto rounded-lg" src={Mentoring} />
             </div>
             <h2 class="mt-4 text-2xl text-center text-black font-bold">
               Mentoring
@@ -34,10 +34,7 @@ const Features = () => {
           </div>
           <div className="basis-4/12">
             <div class="shadow-lg bg-white rounded-3xl p-5 w-[50%] mx-auto">
-              <img
-                class="w-[70%]  mx-auto rounded-lg"
-                src="../src/assets/book.svg"
-              />
+              <img class="w-[70%]  mx-auto rounded-lg" src={book} />
             </div>
             <h2 class="mt-4 text-2xl text-center text-black font-bold">
               Terstruktur
@@ -48,10 +45,7 @@ const Features = () => {
           </div>
           <div className="basis-4/12">
             <div class="shadow-lg bg-white rounded-3xl p-5 w-[50%] mx-auto">
-              <img
-                class="w-[70%]  mx-auto rounded-lg"
-                src="./src/assets/ps.svg"
-              />
+              <img class="w-[70%]  mx-auto rounded-lg" src={game} />
             </div>
             <h2 class="mt-4 text-2xl text-center text-black font-bold">
               Gamifikasi

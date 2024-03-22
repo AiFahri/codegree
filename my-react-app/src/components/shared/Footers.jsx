@@ -2,7 +2,7 @@
 
 import { Footer } from "flowbite-react";
 import { BsFacebook, BsInstagram, BsTwitterX, BsYoutube } from "react-icons/bs";
-
+import Image from "../../../src/assets/Group 24.svg";
 const Footers = () => {
   const style = { color: "white", fontSize: "1.5em" };
 
@@ -12,7 +12,7 @@ const Footers = () => {
         <div className="">
           <Footer.Brand
             href="/landingpage"
-            src="../src/assets/Group 24.svg"
+            src={Image}
             className="h-20"
             alt="Flowbite Logo"
           />

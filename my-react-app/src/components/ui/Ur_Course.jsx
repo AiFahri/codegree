@@ -29,21 +29,51 @@ const Ur_Course = () => {
         viewport={{ once: false, amount: 0.7 }}
         className="text-center my-8"
       >
-        <div className="bg-white h-[500px] w-3/4 flex justify-center items-center  mx-auto text-black rounded-xl">
-          {data.map((d) => (
-            <div key={d.title} className="">
-              <div className="">
-                <img src={d.img} alt="" className="w-1/2" />
-              </div>
-
-              <div className="flex flex-col  justify-between  p-4 w-1/2">
-                <p className="text-lg text-center font-semibold">{d.title}</p>
-                <p className="text-center text-xs text-gray-500 mt-4">
-                  {d.description}
-                </p>
+        <h1 class="text-3xl font-bold ">Course Kamu</h1>
+        <div class="w-[100%] flex justify-center">
+          <div class="shadow-lg w-[80%] grid grid-cols-2 divide-x divide-gray-300 p-10 rounded-lg">
+            <div class="p-10">
+              <p class="border-b-2 border-black  mb-2 font-bold">Materi</p>
+              <div class="grid"></div>
+              <img src="../src/assets/image3.svg" class="rounded-md" />
+              <h3>Memulai Bahasa Pemoraman java</h3>
+              <p>
+                Pelajari konsep pemrograman dasar dengan bahasa Java untuk
+                melatih skill fundamentalmu dalam dunia coding.
+              </p>
+              <div class="flex w-[100%] justify-between">
+                <div class="bg-gray-800 w-[100%] rounded-lg">
+                  <div class="w-[20%] bg-blue-200 rounded-lg">
+                    <span>p</span>
+                  </div>
+                </div>
+                <p class="ml-2">20%</p>
               </div>
             </div>
-          ))}
+            <div class="p-10">
+              <p class="border-b-2 border-black  mb-2 ">Chapter</p>
+              <div class="grid grid-rows-6 gap-8 h-[100%]">
+                <div class=" flex justify-between border-2 p-2 rounded-lg items-center">
+                  1 <span>2</span>
+                </div>
+                <div class=" flex justify-between border-2 p-2 rounded-lg items-center">
+                  1 <span>2</span>
+                </div>
+                <div class=" flex justify-between border-2 p-2 rounded-lg items-center">
+                  1 <span>2</span>
+                </div>
+                <div class=" flex justify-between border-2 p-2 rounded-lg items-center">
+                  1 <span>2</span>
+                </div>
+                <div class=" flex justify-between border-2 p-2 rounded-lg items-center">
+                  1 <span>2</span>
+                </div>
+                <div class=" flex justify-between border-2 p-2 rounded-lg items-center">
+                  1 <span>2</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </motion.div>
     </>

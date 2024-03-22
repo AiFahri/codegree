@@ -20,7 +20,7 @@ const LoginForm = () => {
       const response = await handleLogin(form);
       window.localStorage.setItem("token", response.data.token);
       setTimeout(() => {
-        navigate("/question");
+        navigate("/acc_success");
       }, 1000);
     } catch (error) {
       alert("Email atau Password Anda Salah!");

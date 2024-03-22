@@ -82,6 +82,14 @@ const Course = () => {
             <strong>Kelas dan Objek Statik:</strong> Anggota kelas yang dideklar
           </li>
         </ul>
+        <Button
+          type={"text"}
+          className="mt-6"
+          variation={"primary"}
+          onClick={() => navigate("/quiz")}
+        >
+          Lanjut
+        </Button>
       </div>
     </>
   );

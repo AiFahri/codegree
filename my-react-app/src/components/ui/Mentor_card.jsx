@@ -7,71 +7,70 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants/variants";
 import { useEffect, useState } from "react";
 import { getMentor } from "../../api/services/mentor";
+import { useNavigate } from "react-router-dom";
 
-const data = [
-  {
-    name: "Rina Sugiyem",
-    img: "src/assets/unsplash_mentor.png",
-    job: "Mentor Back End",
-    archivement: (
-      <ul>
-        <li>- Juara 1 Web Development Fasilkom UI Competition</li>
-        <li>- Juara 1 Data Science Kaggle Competition</li>
-        <li>- Juara 3 International UI/UX Competition Harvard University</li>
-      </ul>
-    ),
-    univ: "Universitas Indonesia",
-    faculty: "Fakultas Ilmu Komputer",
-    logo: "src",
-  },
-  {
-    name: "Rina Sugiyem",
-    img: "src/assets/unsplash_mentor.png",
-    job: "Mentor Back End",
-    archivement: (
-      <ul>
-        <li>- Juara 1 Web Development Fasilkom UI Competition</li>
-        <li>- Juara 1 Data Science Kaggle Competition</li>
-        <li>- Juara 3 International UI/UX Competition Harvard University</li>
-      </ul>
-    ),
-    univ: "Universitas Indonesia",
-    faculty: "Fakultas Ilmu Komputer",
-    logo: "src",
-  },
-  {
-    name: "Rina Sugiyem",
-    img: "src/assets/unsplash_mentor.png",
-    job: "Mentor Back End",
-    archivement: (
-      <ul>
-        <li>- Juara 1 Web Development Fasilkom UI Competition</li>
-        <li>- Juara 1 Data Science Kaggle Competition</li>
-        <li>- Juara 3 International UI/UX Competition Harvard University</li>
-      </ul>
-    ),
-    univ: "Universitas Indonesia",
-    faculty: "Fakultas Ilmu Komputer",
-    logo: "src",
-  },
-  {
-    name: "Rina Sugiyem",
-    img: "src/assets/unsplash_mentor.png",
-    job: "Back End",
-    archivement: (
-      <ul>
-        <li>- Juara 1 Web Development Fasilkom UI Competition</li>
-        <li>- Juara 1 Data Science Kaggle Competition</li>
-        <li>- Juara 3 International UI/UX Competition Harvard University</li>
-      </ul>
-    ),
-    univ: "Universitas Indonesia",
-    faculty: "Fakultas Ilmu Komputer",
-    logo: "src",
-  },
-];
-
-// const [data, setData] = useState([]);
+// const data = [
+//   {
+//     name: "Rina Sugiyem",
+//     img: "src/assets/unsplash_mentor.png",
+//     job: "Mentor Back End",
+//     archivement: (
+//       <ul>
+//         <li>- Juara 1 Web Development Fasilkom UI Competition</li>
+//         <li>- Juara 1 Data Science Kaggle Competition</li>
+//         <li>- Juara 3 International UI/UX Competition Harvard University</li>
+//       </ul>
+//     ),
+//     univ: "Universitas Indonesia",
+//     faculty: "Fakultas Ilmu Komputer",
+//     logo: "src",
+//   },
+//   {
+//     name: "Rina Sugiyem",
+//     img: "src/assets/unsplash_mentor.png",
+//     job: "Mentor Back End",
+//     archivement: (
+//       <ul>
+//         <li>- Juara 1 Web Development Fasilkom UI Competition</li>
+//         <li>- Juara 1 Data Science Kaggle Competition</li>
+//         <li>- Juara 3 International UI/UX Competition Harvard University</li>
+//       </ul>
+//     ),
+//     univ: "Universitas Indonesia",
+//     faculty: "Fakultas Ilmu Komputer",
+//     logo: "src",
+//   },
+//   {
+//     name: "Rina Sugiyem",
+//     img: "src/assets/unsplash_mentor.png",
+//     job: "Mentor Back End",
+//     archivement: (
+//       <ul>
+//         <li>- Juara 1 Web Development Fasilkom UI Competition</li>
+//         <li>- Juara 1 Data Science Kaggle Competition</li>
+//         <li>- Juara 3 International UI/UX Competition Harvard University</li>
+//       </ul>
+//     ),
+//     univ: "Universitas Indonesia",
+//     faculty: "Fakultas Ilmu Komputer",
+//     logo: "src",
+//   },
+//   {
+//     name: "Rina Sugiyem",
+//     img: "src/assets/unsplash_mentor.png",
+//     job: "Back End",
+//     archivement: (
+//       <ul>
+//         <li>- Juara 1 Web Development Fasilkom UI Competition</li>
+//         <li>- Juara 1 Data Science Kaggle Competition</li>
+//         <li>- Juara 3 International UI/UX Competition Harvard University</li>
+//       </ul>
+//     ),
+//     univ: "Universitas Indonesia",
+//     faculty: "Fakultas Ilmu Komputer",
+//     logo: "src",
+//   },
+// ];
 
 const handleMentor = async () => {
   try {
@@ -98,6 +97,25 @@ const Mentor_card = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
   };
+  const navigate = useNavigate();
+  const [data, setData] = useState([]);
+  const handleMentor = async () => {
+    try {
+      const response = await getMentor();
+      console.log(response.data);
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
+      if (error.response.data.error === "data not found") {
+        setData([]);
+      }
+    }
+  };
+
+  useEffect(() => {
+    handleMentor();
+  }, []);
+
   return (
     <>
       <motion.div
@@ -135,13 +153,13 @@ const Mentor_card = () => {
                       </p>
                       <p className="text-left text-xs mt-0">{d.language}</p>
                       <p className="text-left text-xs text-gray-500 mt-4">
-                        {d.archivement}
+                        {d.description}
                       </p>
                     </div>
                     <div className="flex p-4">
                       <img src="./src/assets/logo_ui.png" />
                       <div className="pl-4 text-left ">
-                        <p className="text-base font-semibold">{d.univ}</p>
+                        <p className="text-base font-semibold">{d.company}</p>
                         <span className="text-xs ">{d.faculty}</span>
                       </div>
                     </div>

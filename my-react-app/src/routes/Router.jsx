@@ -42,10 +42,10 @@ const router = createBrowserRouter([
     path: "/acc_success",
     element: <Acc_Success />,
   },
-  {
-    path: "/question",
-    element: <Question />,
-  },
+  // {
+  //   path: "/question",
+  //   element: <Question />,
+  // },
   {
     path: "/question2",
     element: <Question2 />,

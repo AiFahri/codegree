@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button";
-import Navbar from "../../../shared/Navbar";
+import Navbar from "../../shared/Navbar";
 import Image from "../../../../src/assets/arrow_back.svg";
 import Image1 from "../../../../src/assets/correct.svg";
 

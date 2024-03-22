@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
 import Image from "../../../src/assets/rina_round.png";
+import Image1 from "../../../src/assets/kid_star.svg";
 
 const data = [
   {
@@ -91,7 +92,7 @@ const Testimoni = () => {
                       </div>
                     </div>
                     <div className="flex items-center justify-center m-10 border border-black w-20 h-8 rounded-2xl">
-                      <img src="./src/assets/kid_star.svg" />
+                      <img src={Image1} />
                       <p>{d.rating}</p>
                     </div>
                   </div>

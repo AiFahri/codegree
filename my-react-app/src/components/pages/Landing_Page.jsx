@@ -13,7 +13,7 @@ import Footers from "../shared/Footers";
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
-import DropDownnn from "../ui/DropDownnn";
+import DropDownnn from "../ui/Drop_down";
 import Navbar_dashboard from "../shared/Navbar_dashboard";
 
 const Landing_Page = () => {

@@ -1,6 +1,6 @@
 import React from "react";
-import MainLayout from "../layout/MainLayout.jsx";
-import RegisterForm from "../auth/RegisterForm.jsx";
+import MainLayout from "../layout/Main_layout.jsx";
+import RegisterForm from "../auth/Register_form.jsx";
 
 const RegisterPage = () => {
   return (

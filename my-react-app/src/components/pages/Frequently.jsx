@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants/variants";
-import DropDownnn from "../ui/DropDownnn";
+import DropDownnn from "../ui/Drop_down";
 
 const Frequently = () => {
   return (

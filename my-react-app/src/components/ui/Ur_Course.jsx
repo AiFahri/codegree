@@ -7,7 +7,7 @@ import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
 import Book from "../../../src/assets/book_5.svg";
 import Kuis from "../../../src/assets/quiz.svg";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "./Progress_bar";
 
 // const data = [
 //   {

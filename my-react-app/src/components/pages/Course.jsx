@@ -1,4 +1,4 @@
-import ProgressBar from "../ui/ProgressBar";
+import ProgressBar from "../ui/Progress_bar";
 import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
 import Footers_course from "../shared/Footers_course";
